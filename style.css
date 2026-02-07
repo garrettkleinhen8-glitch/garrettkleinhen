@@ -40,22 +40,72 @@ a {
    HERO SECTION (HOME)
 ========================= */
 
-.hero {
-  text-align: center;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+/* HERO SECTION - PROFILE ON RIGHT */
+.hero-right .hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* space between text and image */
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* stacks on smaller screens */
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1; /* lets text take remaining space */
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
   margin-bottom: 0.75rem;
 }
 
-.tagline {
-  font-size: 1.2rem;
+.hero-text .tagline {
+  font-size: 1.15rem;
   color: #555;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+/* CTA BUTTON - same styling as before */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #222;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE: stack on mobile */
+@media (max-width: 768px) {
+  .hero-right .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text .tagline {
+    font-size: 1rem;
+  }
 }
 
 /* =========================
@@ -235,6 +285,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
