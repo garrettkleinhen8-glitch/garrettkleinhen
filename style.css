@@ -166,6 +166,30 @@ footer {
   font-size: 0.9rem;
   color: #666;
   border-top: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-contact a {
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: #000;
+}
+
+.footer-contact span {
+  color: #aaa;
 }
 
 /* =========================
@@ -205,3 +229,4 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
