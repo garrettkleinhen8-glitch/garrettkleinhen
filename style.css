@@ -204,10 +204,10 @@ footer {
 
 .tabs {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  gap: 2rem;
   border-bottom: 2px solid #ddd;
-  padding: 1rem 1rem 0;
+  padding: 2rem 2rem 0;
   background-color: #fafafa;
 }
 
@@ -235,5 +235,6 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
