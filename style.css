@@ -43,7 +43,7 @@ a {
 /* PAGE SUBTITLE ABOVE HERO */
 .page-subtitle {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   font-weight: 500;
   color: #555;
@@ -305,6 +305,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
