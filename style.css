@@ -167,3 +167,37 @@ footer {
   color: #666;
   border-top: 1px solid #eee;
 }
+
+/* =========================
+   FOOTER
+========================= */
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  background-color: #f7f7f7;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #eee;
+  color: #222;
+}
+
+.tab.active {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ffffff;
+}
