@@ -203,7 +203,16 @@ a {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+.image-with-caption {
+    text-align: center;
+}
 
+.caption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
 /* =========================
    LISTS (SKILLS / EDUCATION)
 ========================= */
@@ -296,6 +305,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
