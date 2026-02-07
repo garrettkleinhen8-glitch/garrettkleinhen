@@ -255,9 +255,9 @@ footer {
 .tabs {
   display: flex;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   border-bottom: 2px solid #ddd;
-  padding: .2rem .2rem 0;
+  padding: 1rem 1rem 0;
   background-color: #fafafa;
 }
 
@@ -285,6 +285,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
