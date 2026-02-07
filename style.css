@@ -47,7 +47,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   color: #555;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ddd;
 }
@@ -305,6 +305,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
