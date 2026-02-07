@@ -191,6 +191,12 @@ footer {
 .footer-contact span {
   color: #aaa;
 }
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #222;
+}
 
 /* =========================
    NAV TABS
@@ -229,4 +235,5 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
