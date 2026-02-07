@@ -1,123 +1,53 @@
-body {
-  font-family: Arial, sans-serif;
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  color: #222;
-  background-color: #fafafa;
+  padding: 0;
 }
 
-header {
-  background: white;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #333;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.project, .experience {
-  margin-bottom: 30px;
-}
-
-.skills {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ddd;
-  background: white;
-
-}
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 20px 0 40px 0;
-}
-
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.footer-centered {
-  text-align: center;
-  padding: 40px 20px;
-  border-top: 1px solid #ddd;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
 }
 
-.footer-centered h3 {
-  margin-bottom: 20px;
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1, h2, h3 {
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+p {
+  margin-bottom: 1rem;
+  color: #444;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-}
-
-.contact-item a {
-  color: #0066cc;
+a {
   text-decoration: none;
+  color: inherit;
 }
 
-.contact-item a:hover {
-  text-decoration: underline;
-}
+/* =========================
+   HERO SECTION (HOME)
+========================= */
 
-/* HERO SECTION */
 .hero {
   text-align: center;
-  padding: 4rem 1rem 3rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 .hero h1 {
   font-size: 2.8rem;
-  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
@@ -128,18 +58,19 @@ footer {
   margin: 0 auto;
 }
 
-/* PREVIEW SECTION */
+/* =========================
+   PROJECT PREVIEW SECTION
+========================= */
+
 .preview {
   text-align: center;
-  padding: 3rem 1rem;
 }
 
 .preview h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 2rem;
 }
 
-/* PROJECT IMAGE PREVIEW */
 .preview-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -154,22 +85,85 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* BUTTON */
+.preview-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
+  color: #ffffff;
   background-color: #222;
   border-radius: 6px;
-  text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: #000;
   transform: translateY(-2px);
+}
+
+/* =========================
+   GALLERY (ABOUT PAGE)
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery a {
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/* =========================
+   LISTS (SKILLS / EDUCATION)
+========================= */
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
 }
