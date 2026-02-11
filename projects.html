@@ -71,6 +71,18 @@
 
 </section>
 
+  <script>
+  document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    const images = gallery.querySelectorAll('img');
+    let index = 0;
+
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 3000); // change every 3 seconds
+  });
+</script>
 
 <div id="footer-placeholder"></div>
 
@@ -79,6 +91,7 @@
 </body>
 
 </html>
+
 
 
 
