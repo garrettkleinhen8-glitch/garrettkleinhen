@@ -178,31 +178,95 @@ a {
    GALLERY (ABOUT PAGE)
 ========================= */
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+/* GALLERY SECTION */
+.gallery-section {
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-.gallery a {
-  display: block;
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.gallery img {
+/* VIEWPORT */
+.gallery-wrapper {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* SLIDING TRACK */
+.gallery-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* GALLERY ITEM */
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.gallery-item img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
+/* OVERLAY */
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
 }
+
+/* SHOW TITLE ON HOVER */
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* PAUSE ON HOVER (NICE TOUCH) */
+.gallery-wrapper:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+/* SLIDE ANIMATION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 240px;
+    height: 160px;
+  }
+}
+
 .image-with-caption {
     text-align: center;
 }
@@ -305,6 +369,7 @@ footer {
   border-bottom: 2px solid #ffffff;
   font-weight: 600;
 }
+
 
 
 
