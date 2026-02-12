@@ -281,50 +281,71 @@ a {
    LISTS (SKILLS / EDUCATION)
 ========================= */
 
-.skills-section {
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  background-color: #f5f5f5;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.hex-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: max-content;
-  margin: 0 auto;
+body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.hex {
-  position: relative;
-  width: 120px; 
-  height: 69.28px; /* height = width * sqrt(3)/2 */
-  margin: 34.64px 5px; /* half height vertical spacing */
-  background-color: #ffc107;
-  clip-path: polygon(
-    25% 0%, 75% 0%, 
-    100% 50%, 75% 100%, 
-    25% 100%, 0% 50%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: white;
-  transition: transform 0.3s;
+.container {
+    max-width: 800px;
 }
 
-.hex:hover {
-  transform: scale(1.1);
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
 }
 
-.hex-content {
-  text-align: center;
-  padding: 10px;
+.honeycomb {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.hex:nth-child(odd) {
-  margin-top: 34.64px; /* offsets for honeycomb pattern */
+.hex-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -22px;
+}
+
+.hex-row:nth-child(even) {
+    margin-left: 51px;
+}
+
+.hexagon {
+    width: 100px;
+    height: 86px;
+    position: relative;
+    margin: 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #3498db;
+}
+
+.hexagon-content {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.hexagon:hover {
+    background: #fafafa;
 }
 
 ul {
@@ -502,6 +523,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
