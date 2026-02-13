@@ -280,53 +280,85 @@ a {
 /* =========================
    LISTS (SKILLS / EDUCATION)
 ========================= */
-h1 {
+skills {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
     text-align: center;
-    color: white;
-    margin-bottom: 40px;
 }
 
+#skills h1 {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+/* Honeycomb Container */
 .honeycomb {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
 }
 
+/* Each row */
 .hex-row {
     display: flex;
     justify-content: center;
-    margin-bottom: -22px;
+    margin-bottom: -25px; /* controls vertical tightness */
 }
 
+/* Offset every other row */
 .hex-row:nth-child(even) {
-    margin-left: 51px;
+    margin-left: 51px; /* half hex width */
 }
 
+/* Hexagon */
 .hexagon {
     width: 100px;
     height: 86px;
-    position: relative;
-    margin: 0 1px;
+    margin: 0 2px; /* horizontal tightness */
+    background: #f2f2f2; /* neutral instead of blue */
+    clip-path: polygon(
+        50% 0%, 
+        100% 25%, 
+        100% 75%, 
+        50% 100%, 
+        0% 75%, 
+        0% 25%
+    );
+
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background: #3498db;
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Text inside */
 .hexagon-content {
-    text-align: center;
-    color: white;
+    color: #222;
     font-size: 14px;
     font-weight: 600;
-    z-index: 1;
+    text-align: center;
 }
 
+/* Subtle hover (no movement) */
 .hexagon:hover {
-    background: #fafafa;
+    background: #e6e6e6;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .hex-row:nth-child(even) {
+        margin-left: 25px;
+    }
+
+    .hexagon {
+        width: 80px;
+        height: 69px;
+    }
+}
 ul {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
@@ -502,6 +534,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
