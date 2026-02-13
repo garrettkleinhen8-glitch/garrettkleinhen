@@ -351,7 +351,7 @@ skills {
 /* Responsive */
 @media (max-width: 768px) {
     .hex-row:nth-child(even) {
-        margin-left: 25px;
+        margin-left: 50px;
     }
 
     .hexagon {
@@ -534,6 +534,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
