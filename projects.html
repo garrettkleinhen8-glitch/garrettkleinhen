@@ -17,82 +17,131 @@
 </nav>
 </header>
 
-<section class="projects-section" id="projects">
+<section id="projects">
 
   <h2 class="section-title">Projects</h2>
+  <div class="section-divider"></div>
 
-  <!-- ===== COLLEGE PROJECTS ===== -->
-  <h3 class="projects-subtitle">College Projects</h3>
+  <!-- ================= COLLEGE PROJECTS ================= -->
+  <h3 class="project-category">College Projects</h3>
 
+  <!-- College Project 1 -->
   <div class="project">
     <div class="project-text">
-      <h4>Capstone</h4>
+      <h4>Senior Capstone – Automated Test Rig</h4>
       <p>
-        Designed and built a 4-axis robotic arm as part of a senior design course.
-        Responsibilities included CAD modeling, tolerance analysis, and prototype testing.
+        Designed and built a mechanical test rig for evaluating material fatigue.
       </p>
       <ul>
-        <li>SolidWorks CAD & assemblies</li>
-        <li>Basic control system integration</li>
-        <li>3D printed + aluminum components</li>
-      </ul>
-  <h4>Milling Project</h4>
-      <p>
-        Designed and built a 4-axis robotic arm as part of a senior design course.
-        Responsibilities included CAD modeling, tolerance analysis, and prototype testing.
-      </p>
-      <ul>
-        <li>SolidWorks CAD & assemblies</li>
-        <li>Basic control system integration</li>
-        <li>3D printed + aluminum components</li>
+        <li>SolidWorks design + FEA validation</li>
+        <li>Fabricated aluminum structure</li>
+        <li>Performed cyclic load testing</li>
       </ul>
     </div>
 
-    <div class="project-gallery" data-gallery>
-      <img src="images/arm1.jpg" class="active" alt="">
-      <img src="images/arm2.jpg" alt="">
-      <img src="images/arm3.jpg" alt="">
+    <div class="project-images">
+      <img src="images/capstone1.jpg" class="active">
+      <img src="images/capstone2.jpg">
+      <img src="images/capstone3.jpg">
     </div>
   </div>
 
-  <!-- ===== PERSONAL PROJECTS ===== -->
-  <h3 class="projects-subtitle">Personal Projects</h3>
-
+  <!-- College Project 2 -->
   <div class="project">
     <div class="project-text">
-      <h4>Custom 3D Printer Mods</h4>
+      <h4>Autonomous Rover System</h4>
       <p>
-        Ongoing personal project improving print quality and reliability
-        through mechanical upgrades and firmware tuning.
+        Developed a small-scale rover with obstacle detection and path planning.
       </p>
       <ul>
-        <li>Linear rail conversion</li>
-        <li>Custom printed tool mounts</li>
-        <li>Marlin firmware tuning</li>
+        <li>Chassis design and fabrication</li>
+        <li>Integrated sensor mounting system</li>
+        <li>Field testing and performance tuning</li>
       </ul>
     </div>
 
-    <div class="project-gallery" data-gallery>
-      <img src="images/printer1.jpg" class="active" alt="">
-      <img src="images/printer2.jpg" alt="">
-      <img src="images/printer3.jpg" alt="">
+    <div class="project-images">
+      <img src="images/rover1.jpg" class="active">
+      <img src="images/rover2.jpg">
+      <img src="images/rover3.jpg">
+    </div>
+  </div>
+
+
+  <!-- ================= PERSONAL PROJECTS ================= -->
+  <h3 class="project-category">Personal Projects</h3>
+
+  <!-- Personal Project 1 -->
+  <div class="project">
+    <div class="project-text">
+      <h4>Custom Go-Kart Build</h4>
+      <p>
+        Designed and fabricated a custom go-kart chassis focusing on suspension geometry.
+      </p>
+      <ul>
+        <li>TIG welded frame</li>
+        <li>Custom steering system</li>
+        <li>Track-tested improvements</li>
+      </ul>
+    </div>
+
+    <div class="project-images">
+      <img src="images/gokart1.jpg" class="active">
+      <img src="images/gokart2.jpg">
+      <img src="images/gokart3.jpg">
+    </div>
+  </div>
+
+  <!-- Personal Project 2 -->
+  <div class="project">
+    <div class="project-text">
+      <h4>Workshop Storage System</h4>
+      <p>
+        Designed and built a modular storage system to optimize workshop space.
+      </p>
+      <ul>
+        <li>Parametric CAD modeling</li>
+        <li>Plywood + steel construction</li>
+        <li>Improved workflow efficiency</li>
+      </ul>
+    </div>
+
+    <div class="project-images">
+      <img src="images/storage1.jpg" class="active">
+      <img src="images/storage2.jpg">
+      <img src="images/storage3.jpg">
     </div>
   </div>
 
 </section>
-
+  
   <script>
-  document.querySelectorAll('[data-gallery]').forEach(gallery => {
-    const images = gallery.querySelectorAll('img');
-    let index = 0;
+document.querySelectorAll('.project-images').forEach(carousel => {
+  const images = carousel.querySelectorAll('img');
+  let index = 0;
+  let interval;
 
-    setInterval(() => {
-      images[index].classList.remove('active');
-      index = (index + 1) % images.length;
-      images[index].classList.add('active');
-    }, 3000); // change every 3 seconds
-  });
+  function showNext() {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }
+
+  function startCarousel() {
+    interval = setInterval(showNext, 3000);
+  }
+
+  function stopCarousel() {
+    clearInterval(interval);
+  }
+
+  startCarousel();
+
+  carousel.addEventListener('mouseenter', stopCarousel);
+  carousel.addEventListener('mouseleave', startCarousel);
+});
 </script>
+
 
 <div id="footer-placeholder"></div>
 
@@ -101,6 +150,7 @@
 </body>
 
 </html>
+
 
 
 
