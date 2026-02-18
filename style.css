@@ -357,7 +357,7 @@ skills {
 .hex-row {
     display: flex;
     justify-content: center;
-    margin-bottom: -100px; /* controls vertical tightness */
+    margin-bottom: -15px; /* controls vertical tightness */
 }
 
 /* Offset every other row */
@@ -587,6 +587,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
