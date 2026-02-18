@@ -281,46 +281,50 @@ a {
 EXPEREINCE / SKILLS / EDUCATION
 ========================= */
 #experience {
-  max-width: 1000px;
-  margin: 100px auto;
-  padding: 0 20px;
+  padding: 100px 0;
 }
 
-#experience h2 {
+.section-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-  color: black;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.section-divider {
+  width: 70%;
+  height: 1px;
+  margin: 0 auto 80px auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
 .job {
-  background: #34495e;
-  padding: 25px 30px;
-  margin-bottom: 40px;
+  background: #2c3e50;
+  padding: 30px;
+  margin-bottom: 50px;
   border-radius: 8px;
 }
 
-.job-header {
-  margin-bottom: 15px;
-}
-
 .job-header h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 5px;
-  color: #ffffff;
 }
 
 .company {
   display: block;
   font-weight: 600;
-  color: #ecf0f1;
+  margin-bottom: 5px;
 }
 
 .details {
   display: block;
   font-size: 0.9rem;
   color: #bdc3c7;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .job ul {
@@ -328,10 +332,21 @@ EXPEREINCE / SKILLS / EDUCATION
 }
 
 .job li {
-  margin-bottom: 8px;
-  color: #ecf0f1;
-  line-height: 1.5;
+  margin-bottom: 6px;
 }
+
+/* Rotational Subsections */
+.rotation {
+  margin-bottom: 25px;
+  padding-left: 20px;
+  border-left: 3px solid #3498db;
+}
+
+.rotation h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
 
 skills {
     max-width: 1100px;
@@ -587,6 +602,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
