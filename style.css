@@ -362,7 +362,7 @@ skills {
 
 /* Offset every other row */
 .hex-row:nth-child(even) {
-    margin-left: -102px; /* half hex width */
+    margin-left: 0px; /* half hex width */
 }
 
 /* Hexagon */
@@ -587,6 +587,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
