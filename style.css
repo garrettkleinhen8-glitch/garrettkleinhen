@@ -290,7 +290,7 @@ EXPEREINCE / SKILLS / EDUCATION
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: white;
+  color: black;
 }
 
 .job {
@@ -587,6 +587,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
