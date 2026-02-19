@@ -674,11 +674,12 @@ header h1 {
 .tabs {
   position: absolute;
   left: 40px;
-  bottom: 0px;
+  bottom: 10px;
   border-bottom: none;
   background: transparent;
   padding: 0;
 }
+
 
 
 
