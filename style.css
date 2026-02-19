@@ -658,7 +658,7 @@ header {
   left: 0;
   width: 100%;
 
-  background: #1a1a1a; /* match your site */
+  background: #fafafa; /* match your site */
   z-index: 1000;
 
   padding: 20px 0;
@@ -670,8 +670,9 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
+
 
 
 
