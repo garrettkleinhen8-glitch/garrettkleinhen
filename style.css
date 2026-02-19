@@ -648,7 +648,30 @@ footer {
 .project-images img.active {
   opacity: 1;
 }
+/* =========================
+   HEADER
+========================= */
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: #1a1a1a; /* match your site */
+  z-index: 1000;
+
+  padding: 20px 0;
+}
+body {
+  margin: 0;
+  padding-top: 120px; /* adjust until it looks right */
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 
