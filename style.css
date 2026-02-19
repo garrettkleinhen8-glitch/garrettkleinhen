@@ -665,13 +665,14 @@ header {
 }
 body {
   margin: 0;
-  padding-top: 120px; /* adjust until it looks right */
+  padding-top: 100px; /* adjust until it looks right */
 }
 header {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: Center;
 }
+
 
 
 
