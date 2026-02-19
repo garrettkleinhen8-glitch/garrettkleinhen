@@ -657,24 +657,34 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 140px;
 
-  background: #fafafa; /* match your site */
-  z-index: 1000;
+  background-image: url("images/header-photo.jpg"); /* CHANGE THIS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  padding: 20px 0;
-}
-body {
-  margin: 0;
-  padding-top: 100px; /* adjust until it looks right */
-}
-header {
   display: flex;
-  flex-direction: column;
-  align-items: Center;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
 }
 
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Adjust darkness */
+  z-index: 0;
 
-
+header h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
 
 
 
