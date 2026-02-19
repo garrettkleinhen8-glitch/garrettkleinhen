@@ -651,13 +651,44 @@ footer {
 /* =========================
    HEADER
 ========================= */
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 140px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
 }
+
+body {
+  padding-top: 160px; /* slightly larger than header height */
+}
+
+/* Center page title */
+header h1 {
+  position: relative;
+  font-size: 2rem;
+}
+
+/* Keep tabs left */
+.tabs {
+  position: absolute;
+  left: 40px;
+  bottom: 20px;
+  border-bottom: none;
+  background: transparent;
+  padding: 0;
+}
+
 
 
 
