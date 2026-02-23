@@ -37,7 +37,7 @@ a {
 }
 
 /* =========================
-   HERO SECTION (HOME)
+           (HOME)
 ========================= */
 
 /* PAGE SUBTITLE ABOVE HERO */
@@ -118,10 +118,7 @@ a {
     font-size: 1rem;
   }
 }
-
-/* =========================
-   PROJECT PREVIEW SECTION
-========================= */
+*/------Featured projects------*/
 
 #featured-projects {
   padding: 60px 40px;
@@ -172,6 +169,24 @@ a {
 html {
   scroll-behavior: smooth;
 }
+*/ -----Skills Snapshot---- */
+.skills-categories {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-categories h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.skills-categories p {
+  color: #555;
+}
+
 /* =========================
    BUTTONS
 ========================= */
@@ -696,6 +711,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
