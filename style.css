@@ -212,6 +212,21 @@ html {
   background-color: #333;
   transform: translateY(-3px);
 }
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #111;
+  color: white;
+}
 
 /* =========================
    GALLERY (ABOUT PAGE)
@@ -711,6 +726,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
