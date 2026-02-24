@@ -227,7 +227,10 @@ html {
   background-color: #111;
   color: white;
 }
-
+.resume-button {
+  text-align: center;
+  margin-top: 30px; /* optional spacing */
+}
 /* =========================
    GALLERY (ABOUT PAGE)
 ========================= */
@@ -726,6 +729,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
