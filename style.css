@@ -118,7 +118,7 @@ a {
     font-size: 1rem;
   }
 }
-*/------Featured projects------*/
+/*------Featured projects------*/
 
 #featured-projects {
   padding: 60px 40px;
@@ -169,7 +169,7 @@ a {
 html {
   scroll-behavior: smooth;
 }
-*/ -----Skills Snapshot---- */
+/* -----Skills Snapshot---- */
 .skills-categories {
   display: flex;
   justify-content: center;
@@ -720,6 +720,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
