@@ -2,7 +2,7 @@
    GLOBAL STYLES
 ========================= */
 
-{
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -109,7 +109,6 @@ a {
     flex-direction: column;
     text-align: center;
   }
-}
   .hero-text h1 {
     font-size: 2.2rem;
   }
@@ -398,7 +397,7 @@ EXPEREINCE / SKILLS / EDUCATION
 }
 
 
-skills {
+#skills {
     max-width: 1100px;
     margin: 100px auto;
     padding: 0 20px;
@@ -476,7 +475,7 @@ skills {
         width: 80px;
         height: 69px;
     }
-
+}
 /* =========================
    FOOTER
 ========================= */
@@ -720,6 +719,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
