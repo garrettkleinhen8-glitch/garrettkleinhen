@@ -372,7 +372,7 @@ EXPEREINCE / SKILLS / EDUCATION
 .details {
   display: block;
   font-size: 0.9rem;
-  color: #bdc3c7;
+  color: #596369;
   margin-bottom: 20px;
 }
 
@@ -388,7 +388,7 @@ EXPEREINCE / SKILLS / EDUCATION
 .rotation {
   margin-bottom: 25px;
   padding-left: 20px;
-  border-left: 3px solid #3498db;
+  border-left: 3px solid #596369;
 }
 
 .rotation h4 {
@@ -719,6 +719,7 @@ header h1 {
   background: transparent;
   padding: 0;
 }
+
 
 
 
