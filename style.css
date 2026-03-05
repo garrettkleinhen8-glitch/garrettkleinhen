@@ -278,34 +278,52 @@ header h1 {
    7. SKILLS
 ========================= */
 
-#skills {
-  max-width: 1100px;
-  margin: 100px auto;
-  text-align: center;
-}
-
+/* Honeycomb Container */
 .honeycomb {
-  max-width: 900px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* Each row */
 .hex-row {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -22px; /* vertical overlap */
 }
 
+/* Offset every other row */
+.hex-row:nth-child(even) {
+    margin-left: 52px;
+}
+
+/* Hexagon */
 .hexagon {
-  width: 100px;
-  height: 86px;
-  background: #f2f2f2;
-  clip-path: polygon(
-    50% 0%, 
-    100% 25%, 
-    100% 75%, 
-    50% 100%, 
-    0% 75%, 
-    0% 25%
-  );
+    width: 100px;
+    height: 86px;
+    margin: 0 3px;
+    background: #f2f2f2;
+
+    clip-path: polygon(
+        50% 0%, 
+        100% 25%, 
+        100% 75%, 
+        50% 100%, 
+        0% 75%, 
+        0% 25%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text inside */
+.hexagon-content {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
 }
 
 
@@ -360,4 +378,5 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
 
