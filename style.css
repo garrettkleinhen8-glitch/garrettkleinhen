@@ -93,6 +93,11 @@ header h1 {
   font-weight: 600;
 }
 
+.header-resume {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
 
 /* =========================
    3. HERO SECTION (HOME)
@@ -141,6 +146,11 @@ header h1 {
   color: #555;
 }
 
+.about-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 /* =========================
    4. FEATURED PROJECTS (HOME)
@@ -350,3 +360,4 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
