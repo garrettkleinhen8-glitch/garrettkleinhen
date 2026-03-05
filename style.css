@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL STYLES
+   1. GLOBAL STYLES
 ========================= */
 
 * {
@@ -8,13 +8,16 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
   color: #222;
   line-height: 1.6;
-  padding-top: 140px; /* matches header height */
-  overflow-x: hidden;
+  padding-top: 160px; /* header offset */
 }
 
 section {
@@ -38,11 +41,63 @@ a {
   color: inherit;
 }
 
+
 /* =========================
-           HOME
+   2. HEADER / NAVIGATION
 ========================= */
 
-/* PAGE SUBTITLE ABOVE HERO */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+header h1 {
+  position: relative;
+  font-size: 2rem;
+}
+
+.tabs {
+  position: absolute;
+  left: 40px;
+  bottom: 10px;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  background-color: #f3f3f3;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab:hover {
+  background-color: #eaeaea;
+  color: #222;
+}
+
+.tab.active {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ffffff;
+  font-weight: 600;
+}
+
+
+/* =========================
+   3. HERO SECTION (HOME)
+========================= */
+
 .page-subtitle {
   width: 100%;
   text-align: left;
@@ -54,7 +109,6 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
-/* HERO SECTION - PROFILE ON RIGHT */
 .hero-right .hero-content {
   display: flex;
   align-items: center;
@@ -80,48 +134,16 @@ a {
 
 .hero-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.75rem;
 }
 
 .hero-text .tagline {
   font-size: 1.15rem;
   color: #555;
-  margin-bottom: 1.25rem;
 }
 
-/* CTA BUTTON */
-.cta-button {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #222;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #000;
-  transform: translateY(-2px);
-}
-
-/* RESPONSIVE: stack on mobile */
-@media (max-width: 768px) {
-  .hero-right .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-  .hero-text .tagline {
-    font-size: 1rem;
-  }
-}
 
 /* =========================
-   FEATURED PROJECTS
+   4. FEATURED PROJECTS (HOME)
 ========================= */
 
 #featured-projects {
@@ -144,92 +166,73 @@ a {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
-  overflow: hidden;
 }
 
 .project-card img {
   width: 100%;
   height: 200px;
-  object-fit: contain; /* fit without cropping */
-  background-color: #f7f7f7; /* blank filler if image smaller */
+  object-fit: contain;
+  background-color: #f7f7f7;
   border-radius: 12px;
-  display: block;
-}
-
-.project-card h3 {
-  margin-top: 15px;
-  font-size: 1.3rem;
-}
-
-.project-card p {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  color: #555;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
 }
 
+
 /* =========================
-   BUTTONS
+   5. PROJECTS PAGE
 ========================= */
 
-.projects-button {
-  margin-top: 40px;
-  text-align: center;
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 
-.btn-primary {
-  display: inline-block;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.project {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
 }
 
-.btn-primary:hover {
-  background-color: #333;
-  transform: translateY(-3px);
+.project-text {
+  flex: 1;
 }
 
-.btn-outline {
-  display: inline-block;
-  padding: 12px 28px;
-  border: 2px solid #111;
-  color: #111;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.project-images {
+  flex: 1;
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.btn-outline:hover {
-  background-color: #111;
-  color: white;
+.project-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f7f7f7;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 }
 
-.resume-button {
-  text-align: center;
-  margin-top: 30px;
+.project-images img.active {
+  opacity: 1;
 }
+
 
 /* =========================
-   GALLERY (ABOUT PAGE)
+   6. GALLERY (ABOUT PAGE)
 ========================= */
 
 .gallery-section {
   padding: 4rem 1rem;
   text-align: center;
-}
-
-.gallery-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .gallery-wrapper {
@@ -251,79 +254,54 @@ a {
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
-  flex-shrink: 0;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* fit without cropping */
-  background-color: #f7f7f7; /* blank filler */
-  display: block;
+  object-fit: contain;
+  background-color: #f7f7f7;
 }
 
-.gallery-item .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 1rem;
-  text-align: center;
-}
-
-.gallery-item:hover .overlay {
-  opacity: 1;
-}
-
-.gallery-wrapper:hover .gallery-track {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@media (max-width: 768px) {
-  .gallery-item {
-    width: 240px;
-    height: 160px;
-  }
-}
-
-.image-with-caption {
-  text-align: center;
-}
-
-.caption {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: #666;
-  font-style: italic;
-}
 
 /* =========================
-   EXPERIENCE / SKILLS / EDUCATION
+   7. SKILLS
 ========================= */
 
-#experience {
-  padding: 50px 0;
+#skills {
+  max-width: 1100px;
+  margin: 100px auto;
+  text-align: center;
 }
 
-.section-divider {
-  width: 70%;
-  height: 1px;
-  margin: 0 auto 80px auto;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+.honeycomb {
+  max-width: 900px;
+  margin: 0 auto;
 }
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+}
+
+.hexagon {
+  width: 100px;
+  height: 86px;
+  background: #f2f2f2;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+}
+
+
+/* =========================
+   8. EXPERIENCE
+========================= */
 
 .job {
   background: #EDE8D0;
@@ -332,107 +310,36 @@ a {
   border-radius: 8px;
 }
 
-.job-header h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.company {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.details {
-  display: block;
-  font-size: 0.9rem;
-  color: #596369;
-  margin-bottom: 20px;
-}
-
-.job ul {
-  padding-left: 20px;
-}
-
-.job li {
-  margin-bottom: 6px;
-}
-
 .rotation {
   margin-bottom: 25px;
   padding-left: 20px;
   border-left: 3px solid #596369;
 }
 
-.rotation h4 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
 
 /* =========================
-   SKILLS
+   9. BUTTONS
 ========================= */
 
-#skills {
-  max-width: 1100px;
-  margin: 100px auto;
-  padding: 0 20px;
-  text-align: center;
+.cta-button,
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #222;
+  color: white;
+  border-radius: 30px;
 }
 
-#skills h1 {
-  color: black;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
+.btn-outline {
+  border: 2px solid #111;
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 30px;
 }
 
-.honeycomb {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hex-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -16px;
-}
-
-.hex-row:nth-child(even) {
-  margin-left: 0px;
-}
-
-.hexagon {
-  width: 100px;
-  height: 86px;
-  margin: 0 2px;
-  background: #f2f2f2;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hexagon-content {
-  color: #222;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.hexagon:hover {
-  background: #e6e6e6;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 768px) {
-  .hex-row:nth-child(even) { margin-left: 55px; }
-  .hexagon { width: 80px; height: 69px; }
-}
 
 /* =========================
-   FOOTER
+   10. FOOTER
 ========================= */
 
 footer {
@@ -443,141 +350,3 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
-
-.footer-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.footer-contact a {
-  color: #555;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer-contact a:hover { color: #000; }
-
-.footer-contact span { color: #aaa; }
-
-.footer-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #222;
-}
-
-/* =========================
-   NAV TABS
-========================= */
-
-.tab {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #555;
-  background-color: #f3f3f3;
-  border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.tab:hover {
-  background-color: #eaeaea;
-  color: #222;
-}
-
-.tab.active {
-  background-color: #ffffff;
-  color: #000;
-  border: 1px solid #ddd;
-  border-bottom: 2px solid #ffffff;
-  font-weight: 600;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 140px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-header h1 { position: relative; font-size: 2rem; }
-
-.tabs {
-  position: absolute;
-  left: 40px;
-  bottom: 10px;
-  border-bottom: none;
-  background: transparent;
-  padding: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
