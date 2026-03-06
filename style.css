@@ -278,6 +278,35 @@ header h1 {
    7. SKILLS
 ========================= */
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.skill-category {
+  text-align: center;
+}
+
+.skill-category h4 {
+  margin-bottom: 12px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-tags span {
+  background: #f3f3f3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
 /* Honeycomb Container */
 .honeycomb {
     width: 100%;
@@ -459,6 +488,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
 
 
 
