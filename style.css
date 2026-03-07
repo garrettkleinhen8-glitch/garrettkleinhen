@@ -382,7 +382,7 @@ header h1 {
 .hex-row {
     display: flex;
     justify-content: center;
-    margin-bottom: -30px; /* vertical overlap */
+    margin-bottom: 0px; /* vertical overlap */
 }
 
 /* Offset every other row */
@@ -552,6 +552,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
 
 
 
