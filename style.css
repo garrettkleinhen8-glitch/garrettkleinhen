@@ -258,7 +258,8 @@ header h1 {
 .gallery-track {
   display: flex;
   gap: 1.5rem;
-  animation: scroll 60s linear infinite;
+  animation: scroll 25s linear infinite;
+   will-change: transform;
 }
 
 .gallery-item {
@@ -552,6 +553,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
 
 
 
