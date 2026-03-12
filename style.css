@@ -297,7 +297,7 @@ header h1 {
 /* Smooth looping */
 @keyframes scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-100%); }
 }
 
 .gallery-wrapper:hover .gallery-track {
@@ -553,6 +553,7 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fafafa;
 }
+
 
 
 
